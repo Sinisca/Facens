@@ -1,5 +1,5 @@
     a = int(input('Digite um número: ')) #Inserção da variável feita pelo usuário
-    print(type(a)) ##Built-in type mostra qual tipo de item é a variável
+    print(type(a)) #Built-in type mostra qual tipo de item é a variável
 
     def prime_number(a): #Testar se é inteiro
         if type(a) == int: #Built-in type compara se a variável é inteira
