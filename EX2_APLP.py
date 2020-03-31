@@ -33,7 +33,7 @@ def soma_listas(soma):
     return (soma)
 
 def vazio(lista):
-    if lista1 and lista2 != None:
+    if lista1 and lista2 != None: #Verifica se as listas estão vazias e retorna -1
         return ('-1')
 
 print(lista_1(lista1))
