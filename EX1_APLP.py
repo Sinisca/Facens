@@ -1,3 +1,5 @@
+class teste:
+
     a = int(input('Digite um número: ')) #Inserção da variável feita pelo usuário
     print(type(a)) #Built-in type mostra qual tipo de item é a variável
 
