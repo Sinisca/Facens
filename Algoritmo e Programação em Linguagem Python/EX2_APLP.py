@@ -2,7 +2,7 @@ lista1 = [] #Lista 1 vazia
 lista2 = [] #Lista 2 vazia
 x =  []     #Declaração de x
 soma = []   #Declaração de soma
-lista = []  #Declaração de lista
+lista = lista1 and lista2  #Declaração de lista
 
 def lista_1(lista1):
 
@@ -33,8 +33,8 @@ def soma_listas(soma):
     return (soma)
 
 def vazio(lista):
-    if lista1 and lista2 != None: #Verifica se as listas estão vazias e retorna -1
-        return ('-1')
+    if lista != None: #Verifica se as listas estão vazias e retorna -1
+        return('-1')
 
 print(lista_1(lista1))
 print(lista_2(lista2))
