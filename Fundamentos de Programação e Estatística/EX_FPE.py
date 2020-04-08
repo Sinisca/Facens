@@ -1,20 +1,20 @@
 import numpy as np
 import statistics as st
+import random
 
-def insert_data():
-    lista = []
-    print('\nREGRAS NA FORMAÇÃO DA LISTA:\n'
-          '1.Um dos valores tem que estar repetido\n'
-          '2.O conjunto de dados deve apresentar, pelo menos, 6 valores únicos.\n'
-          '3.NÃO É PERMITIDO escolher todos os números iguais.\n'
-          '4.A LISTA POSSUI APENAS 12 ELEMENTOS\n')
-
-    for i in range(0, 12):
-        elemento = int(input('Elemento inserido no índice {}: '.format(i)))
-        lista.append(elemento)
+def lista_random():
+    lista = random.sample(range(0, 50), 12)
+    lista.sort()
     return lista
 
-lista = insert_data()
+# def insert_data():
+#     lista = []
+#     for i in range(0, 12):
+#         elemento = int(input('Elemento inserido no índice {}: '.format(i)))
+#         lista.append(elemento)
+#     return lista
+
+lista = lista_random()
 print('A sua lista é: ', lista)
 print('A média dos índices é: {:.4f} '.format(np.mean(lista)))
 print('A moda é: {:.4f} '.format(st.mode(lista)))
