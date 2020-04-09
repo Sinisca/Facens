@@ -3,7 +3,9 @@ import statistics as st
 import random
 
 def lista_random():
-    lista = random.sample(range(0, 50), 12)
+    lista = []
+    for i in range(0,12):
+        lista.append(random.randint(0,50))
     lista.sort()
     return lista
 
