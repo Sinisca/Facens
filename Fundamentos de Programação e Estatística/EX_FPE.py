@@ -5,7 +5,7 @@ import random
 def lista_random():
     lista = []
     for i in range(0,12):
-        lista.append(random.randint(0,50))
+        lista.append(random.randint(1,50))
     lista.sort()
     return lista
 
@@ -17,10 +17,10 @@ def lista_random():
 #     return lista
 
 lista = lista_random()
-print('A sua lista é: ', lista)
-print('A média dos índices é: {:.4f} '.format(np.mean(lista)))
-print('A moda é: {:.4f} '.format(st.mode(lista)))
-print('A Mediana é: {:.4f} '.format(st.median(lista)))
-print('A variância amostral é: {:.4f}'.format(st.pvariance(lista)))
-print('O desvio padrão amostral é: {:.4f}'.format(st.stdev(lista)))
-print('O coeficiente de variação é: {:.4f}'.format(st.variance(lista)))
+print(f'A sua lista é: {lista}')
+print(f'A média dos índices é: {np.mean(lista):.4f} ')
+print(f'A moda é: {st.mode(lista):.4f} ')
+print(f'A Mediana é: {st.median(lista):.4f} ')
+print(f'A variância amostral é: {st.pvariance(lista):.4f}')
+print(f'O desvio padrão amostral é: {st.stdev(lista):.4f}')
+print(f'O coeficiente de variação é: {st.variance(lista):.4f}')
