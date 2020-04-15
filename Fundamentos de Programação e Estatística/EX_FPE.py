@@ -9,13 +9,6 @@ def lista_random():
     lista.sort()
     return lista
 
-# def insert_data():
-#     lista = []
-#     for i in range(0, 12):
-#         elemento = int(input('Elemento inserido no índice {}: '.format(i)))
-#         lista.append(elemento)
-#     return lista
-
 lista = lista_random()
 print(f'A sua lista é: {lista}')
 print(f'A média dos índices é: {np.mean(lista):.4f} ')
