@@ -1,0 +1,17 @@
+Soma de público das copas com final 0: 8934841
+Quantidade total de gols entre as copas de 1954 e 1990: 1131
+Média de público: 1872882.35
+Média de gols por partida: 2.85
+Quantidade de vezes em que o país sede foi campeão: 5
+Quantidade de vezes em que o time do Brasil ficou entre uma das 4 primeiras posições: 11
+Ano das edições em que o time da França finalizou em terceiro lugar: 1958,1986
+Quantidade de vitórias por país, classificada em ordem crescente do número de títulos:
+	England:1
+	France:1
+	Spain:1
+	Germany:1
+	Uruguay:2
+	Argentina:2
+	Germany FR:3
+	Italy:4
+	Brazil:5
