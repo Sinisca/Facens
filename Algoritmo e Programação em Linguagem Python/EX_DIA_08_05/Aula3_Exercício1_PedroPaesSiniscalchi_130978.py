@@ -1,6 +1,5 @@
 import csv
 
-
 def output(arquivo_csv):
     sum_soma = 0
     soma_gols = 0
