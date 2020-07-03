@@ -1,11 +1,15 @@
 import pandas as pd
-#%matplotlib inline
-#%pylab inline
-import matplotlib.pyplot as plt
+import numpy as np
 import seaborn as sns
-plt.style.use('ggplot')
+import matplotlib.pyplot as plt
+from matplotlib import cm
+from sklearn.model_selection import train_test_split
+from sklearn import metrics
 
-dataset = pd.read_csv('houses_to_rent_v2.csv', sep=';')
-print(dataset.head().T)
+file = (r"houses_to_rent_v2.csv")
+df = pd.read_csv(file)
+cleanup_nums = {"animal":     {"not acept": 0, "acept": 1},
+                "furniture": {"not furnished": 0, "furnished": 1}}
 
-print(dataset.groupby('city')['city'].count())
+df.replace(cleanup_nums, inplace=True)
+print(df.head())
