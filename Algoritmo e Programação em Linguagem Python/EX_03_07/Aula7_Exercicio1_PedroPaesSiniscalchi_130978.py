@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 #1 - Efetuar a leitura do dataset através do Pandas, gerando um DataFrame de nome tit,
 #levando-se em consideração que o arquivo encontra-se na mesma pasta do notebook.
@@ -14,24 +15,34 @@ print(tit.tail(8))
 #4 - Cálculos envolvendo colunas numéricas com dados faltantes podem sofrer impacto.
 #É possível afirmar se há dados faltantes no dataset? Caso positivo, quais e quantos seriam esses dados?
 #Preencha os dados faltantes de forma que não influenciem em operações futuras.
-
+print(tit.dropna(axis = 1))
 
 #ADEQUANDO O DataSet
 #4 - Uma vez que algumas colunas não serão utilizadas, eventualmente é melhor excluí-las para que não interfiram na análise.
 #Assim, exclua do dataset as colunas Sibsp, Parch e Ticket.
+print(tit.drop(['SibSp', 'Ticket', 'Parch'], axis = 1))
 
 #5 - Renomear as colunas restantes para a lingua portuguesa, utilizando os seguintes nomes de colunas: IdPassageiro, Sobreviveu, Classe, Nome, Sexo, Idade, Tarifa, Cabine e Embarque
+print(tit.rename(columns = {'PassengerId': 'IdPassageiro', 'Survived': 'Sobreviveu', 'Pclass': 'Classe', 'Name': 'Nome', 'Sex': 'Sexo', 'Age': 'Idade', 'Fare': 'Tarifa', 'Cabin': 'Cabine', 'Embarked': 'Embarque'}))
 
 #6 - Alterar o conteudo da coluna Sobreviveu para:
 #0 => Não
 #1 => Sim
+print(tit['Sobreviveu'].apply(lambda x: x.replace('0', 'Não')))
+print(tit['Sobreviveu'].apply(lambda x: x.replace('1', 'Sim')))
 
 #7 - Alterar o conteudo da coluna Sexo para:
 #female => Mulher
 #male => Homem
+print(tit['Sexo'].apply(lambda x: x.replace('female', 'Mulher')))
+print(tit['Sexo'].apply(lambda x: x.replace('Male', 'Homem')))
 
 #ALGUNS NÚMEROS
 #8 - Quantas mulheres e quantos homems estavam à bordo, de acordo com o dataset?
+soma_male = tit['male'].sum()
+soma_female = tit['female'].sum()
+print(soma_male)
+print(soma_female)
 
 #9 - Quantos passageiros sobreviveram e quantos não sobreviveram?
 
