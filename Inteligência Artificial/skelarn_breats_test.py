@@ -20,5 +20,5 @@ knn = KNeighborsClassifier(n_neighbors=3)
 print(knn.fit(X_train, y_train))
 
 y_pred = knn.predict(X_val)
-print(accuracy_score(y_val, y_pred))
+print('Acurácia: ', accuracy_score(y_val, y_pred))
 

@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import numpy as np
+from sklearn.metrics import confusion_matrix
 
 bc = load_breast_cancer()
 
@@ -67,7 +68,6 @@ print('FN:', fn)
 print('---')
 
 # calculando a matriz utilizando scikit-learn
-from sklearn.metrics import confusion_matrix
 print(confusion_matrix(y_test, y_pred))
 print('---')
 
@@ -77,5 +77,17 @@ print('VP:', vp)
 print('FP:', fp)
 print('VN:', vn)
 print('FN:', fn)
+
+#Precisão
+p = vp / (vp+ fp)
+print('Precisão: ', p)
+
+#Revocação
+r = vp / (vp +fn)
+print('Revocação: ', r)
+
+#F-medida
+f = 2 * (p * r / (p + r))
+print('F-medida: ', f)
 
 
