@@ -4,6 +4,8 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import accuracy_score
 import numpy as np
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+import pandas as pd
 
 bc = load_breast_cancer()
 
@@ -89,5 +91,10 @@ print('Revocação: ', r)
 #F-medida
 f = 2 * (p * r / (p + r))
 print('F-medida: ', f)
+
+#Classification Report
+report = classification_report(y_test, y_pred, output_dict=True)
+bc = pd.DataFrame(report).transpose()
+print(bc)
 
 
